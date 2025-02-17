@@ -7,9 +7,30 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- <style>
+        .no-scroll {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    
+        body.no-scroll {
+            overflow: hidden;
+        }
+    </style> -->
+    
 </head>
-<body>
-    <div id="nav">
+<body class="no-scroll">
+        <div class="fixed young   block md:hidden z-99 right-0 top-0 left-0 bottom-0 bg-[#f1f1f1] flex items-center justify-center px-20 no-scroll">
+            <p class="px-10">This website by Jotirmoy is compatible with mobile devices</p>
+        </div>
+
+    
+    
+    <div id="nav" class="z-20">
         <h3><b>CYBER</b>FICTION*</h3>
         <button>FEBRUARY,2025</button>
     </div>
