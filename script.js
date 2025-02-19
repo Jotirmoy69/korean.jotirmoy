@@ -468,7 +468,6 @@ gsap.to(".page3", {
 })
 
 
-if(window.innerWidth < 768){
     window.addEventListener('load', () => {
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none';
@@ -487,4 +486,4 @@ if(window.innerWidth < 768){
           });
         });
       });
-}
+
