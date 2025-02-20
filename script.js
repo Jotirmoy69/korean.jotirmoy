@@ -468,22 +468,26 @@ gsap.to(".page3", {
 })
 
 
-    window.addEventListener('load', () => {
-        const preloader = document.getElementById('preloader');
-        preloader.style.display = 'none';
-      });
-      document.addEventListener('DOMContentLoaded', () => {
-        const preloader = document.getElementById('preloader');
-        const images = document.querySelectorAll('img');
-        let imagesLoaded = 0;
-    
-        images.forEach((img) => {
-          img.addEventListener('load', () => {
-            imagesLoaded++;
-            if (imagesLoaded === images.length) {
-              preloader.style.display = 'none';
-            }
-          });
-        });
-      })
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 4000); // 4000 milliseconds = 4 seconds
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+  const preloader = document.getElementById('preloader');
+  const images = document.querySelectorAll('img');
+  let imagesLoaded = 0;
+
+  images.forEach((img) => {
+    img.addEventListener('load', () => {
+      imagesLoaded++;
+      if (imagesLoaded === images.length) {
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 4000); // 4000 milliseconds = 4 seconds
+      }
+    });
+  });
+});
